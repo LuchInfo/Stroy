@@ -1,0 +1,2620 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10203f" />
+
+
+  <title>Подрядчики — Охрана труда</title>
+
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+
+<body>
+
+
+<div class="app-shell">
+
+
+  <!-- ЛЕВОЕ МЕНЮ -->
+  <aside class="sidebar">
+
+
+    <div class="brand">
+      <div class="brand-mark">ОТ</div>
+
+
+      <div>
+        <div class="brand-title">Подрядчики</div>
+        <div class="brand-subtitle">Система допуска</div>
+      </div>
+    </div>
+
+
+    <nav class="nav">
+
+
+      <button class="nav-item active" data-view="dashboard">
+        <span>⌂</span>
+        Главная
+      </button>
+
+
+      <button class="nav-item" data-view="requests">
+        <span>▤</span>
+        Заявки
+      </button>
+
+
+      <button class="nav-item" data-view="contractors">
+        <span>🏢</span>
+        Организации
+      </button>
+
+
+      <button class="nav-item" data-view="workers">
+        <span>👷</span>
+        Работники
+      </button>
+
+
+      <button class="nav-item" data-view="documents">
+        <span>📄</span>
+        Документы
+      </button>
+
+
+      <button class="nav-item" data-view="briefings">
+        <span>✓</span>
+        Инструктажи
+      </button>
+
+
+      <button class="nav-item" data-view="permits">
+        <span>QR</span>
+        Допуски
+      </button>
+
+
+      <button class="nav-item" data-view="archive">
+        <span>◷</span>
+        Архив
+      </button>
+
+
+    </nav>
+
+
+
+
+    <div class="sidebar-footer">
+
+
+      <div class="user-badge">
+        ОТ
+      </div>
+
+
+      <div>
+        <div class="user-name">
+          Сотрудник ОТ
+        </div>
+
+
+        <div class="user-role">
+          Демо-режим
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </aside>
+
+
+
+
+  <!-- ОСНОВНАЯ ЧАСТЬ -->
+  <main class="main">
+
+
+    <!-- МОБИЛЬНАЯ ШАПКА -->
+    <header class="mobile-header">
+
+
+      <div class="brand-mini">
+        <span>ОТ</span>
+        Подрядчики
+      </div>
+
+
+      <button id="menuToggle" class="icon-btn">
+        ☰
+      </button>
+
+
+    </header>
+
+
+
+
+    <!-- ========================= -->
+    <!-- ГЛАВНАЯ -->
+    <!-- ========================= -->
+
+
+    <section id="dashboard" class="view active">
+
+
+      <div class="page-head">
+
+
+        <div>
+
+
+          <h1>
+            Контроль подрядных организаций
+          </h1>
+
+
+          <p>
+            Оперативный контроль заявок, документов,
+            инструктажей и допусков
+          </p>
+
+
+        </div>
+
+
+        <button
+          class="btn primary"
+          data-action="new-request"
+        >
+          + Новая заявка
+        </button>
+
+
+      </div>
+
+
+
+
+      <!-- ПОКАЗАТЕЛИ -->
+
+
+      <div class="metrics">
+
+
+        <article class="metric-card">
+
+
+          <div class="metric-label">
+            Ожидаются сегодня
+          </div>
+
+
+          <div class="metric-value">
+            4
+          </div>
+
+
+          <div class="metric-note">
+            23 работника
+          </div>
+
+
+        </article>
+
+
+
+
+        <article class="metric-card">
+
+
+          <div class="metric-label">
+            На проверке
+          </div>
+
+
+          <div class="metric-value">
+            3
+          </div>
+
+
+          <div class="metric-note">
+            2 с замечаниями
+          </div>
+
+
+        </article>
+
+
+
+
+        <article class="metric-card">
+
+
+          <div class="metric-label">
+            Действующие допуски
+          </div>
+
+
+          <div class="metric-value success">
+            8
+          </div>
+
+
+          <div class="metric-note">
+            47 работников
+          </div>
+
+
+        </article>
+
+
+
+
+        <article class="metric-card">
+
+
+          <div class="metric-label">
+            Требуют внимания
+          </div>
+
+
+          <div class="metric-value danger">
+            2
+          </div>
+
+
+          <div class="metric-note">
+            есть блокировки
+          </div>
+
+
+        </article>
+
+
+      </div>
+
+
+
+
+      <div class="content-grid">
+
+
+        <!-- СЕГОДНЯ НА ПРЕДПРИЯТИИ -->
+
+
+        <article class="panel">
+
+
+          <div class="panel-head">
+
+
+            <div>
+
+
+              <h2>
+                Сегодня на предприятии
+              </h2>
+
+
+              <p>
+                Текущие подрядчики и статус допуска
+              </p>
+
+
+            </div>
+
+
+            <button
+              class="btn ghost"
+              data-view-link="permits"
+            >
+              Все допуски
+            </button>
+
+
+          </div>
+
+
+
+
+          <div class="list">
+
+
+            <button
+              class="list-row"
+              data-request-id="142"
+            >
+
+
+              <div>
+
+
+                <strong>
+                  ООО «СтройМонтаж»
+                </strong>
+
+
+                <span>
+                  Цех №5 · ремонт вентиляции · 6 чел.
+                </span>
+
+
+              </div>
+
+
+              <span class="status success">
+                Допущены
+              </span>
+
+
+            </button>
+
+
+
+
+            <button
+              class="list-row"
+              data-request-id="145"
+            >
+
+
+              <div>
+
+
+                <strong>
+                  ООО «Электросервис»
+                </strong>
+
+
+                <span>
+                  Корпус №2 · электромонтаж · 4 чел.
+                </span>
+
+
+              </div>
+
+
+              <span class="status warning">
+                Проверка
+              </span>
+
+
+            </button>
+
+
+
+
+            <button
+              class="list-row"
+              data-request-id="149"
+            >
+
+
+              <div>
+
+
+                <strong>
+                  ООО «ПромВысота»
+                </strong>
+
+
+                <span>
+                  Корпус №7 · работы на высоте · 8 чел.
+                </span>
+
+
+              </div>
+
+
+              <span class="status danger">
+                Нет допуска
+              </span>
+
+
+            </button>
+
+
+          </div>
+
+
+        </article>
+
+
+
+
+        <!-- СЛЕДУЮЩИЕ ДЕЙСТВИЯ -->
+
+
+        <article class="panel">
+
+
+          <div class="panel-head">
+
+
+            <div>
+
+
+              <h2>
+                Следующие действия
+              </h2>
+
+
+              <p>
+                Что требует внимания отдела ОТ
+              </p>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+          <div class="task-list">
+
+
+            <button
+              class="task"
+              data-view-link="briefings"
+            >
+
+
+              <span class="task-icon">
+                1
+              </span>
+
+
+              <span>
+
+
+                <strong>
+                  Провести инструктаж
+                </strong>
+
+
+                <small>
+                  ООО «СтройМонтаж» · 6 работников
+                </small>
+
+
+              </span>
+
+
+            </button>
+
+
+
+
+            <button
+              class="task"
+              data-view-link="documents"
+            >
+
+
+              <span class="task-icon warn">
+                2
+              </span>
+
+
+              <span>
+
+
+                <strong>
+                  Проверить документы
+                </strong>
+
+
+                <small>
+                  ООО «Электросервис»
+                </small>
+
+
+              </span>
+
+
+            </button>
+
+
+
+
+            <button
+              class="task"
+              data-view-link="documents"
+            >
+
+
+              <span class="task-icon danger">
+                !
+              </span>
+
+
+              <span>
+
+
+                <strong>
+                  Устранить замечания
+                </strong>
+
+
+                <small>
+                  ООО «ПромВысота» · 2 проблемы
+                </small>
+
+
+              </span>
+
+
+            </button>
+
+
+          </div>
+
+
+        </article>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- ЗАЯВКИ -->
+    <!-- ========================= -->
+
+
+    <section id="requests" class="view">
+
+
+      <div class="page-head">
+
+
+        <div>
+
+
+          <h1>
+            Заявки
+          </h1>
+
+
+          <p>
+            Полный цикл допуска подрядных организаций
+          </p>
+
+
+        </div>
+
+
+        <button
+          class="btn primary"
+          data-action="new-request"
+        >
+          + Новая заявка
+        </button>
+
+
+      </div>
+
+
+
+
+      <div class="filters">
+
+
+        <input
+          id="requestSearch"
+          class="input"
+          placeholder="Поиск по организации или номеру..."
+        />
+
+
+
+
+        <select
+          id="statusFilter"
+          class="input"
+        >
+
+
+          <option value="">
+            Все статусы
+          </option>
+
+
+          <option>
+            Ожидает инструктажа
+          </option>
+
+
+          <option>
+            Есть замечания
+          </option>
+
+
+          <option>
+            Допущен
+          </option>
+
+
+        </select>
+
+
+      </div>
+
+
+
+
+      <div
+        id="requestCards"
+        class="request-cards"
+      >
+
+
+
+
+        <!-- ЗАЯВКА 1 -->
+
+
+        <article
+          class="request-card"
+          data-search="ЗП-2026-0142 строймонтаж ожидает инструктажа"
+        >
+
+
+          <div class="request-top">
+
+
+            <div>
+
+
+              <div class="request-number">
+                ЗП-2026-0142
+              </div>
+
+
+              <h3>
+                ООО «СтройМонтаж»
+              </h3>
+
+
+              <p>
+                Цех №5 · ремонт вентиляции · 21–23 августа
+              </p>
+
+
+            </div>
+
+
+            <span class="status warning">
+              Ожидает инструктажа
+            </span>
+
+
+          </div>
+
+
+
+
+          <div class="steps">
+
+
+            <span class="done">
+              Заявка ✓
+            </span>
+
+
+            <span class="done">
+              Документы ✓
+            </span>
+
+
+            <span class="done">
+              Работники ✓
+            </span>
+
+
+            <span class="active-step">
+              Инструктаж
+            </span>
+
+
+            <span>
+              Допуск
+            </span>
+
+
+          </div>
+
+
+
+
+          <div class="request-bottom">
+
+
+            <span>
+              6 работников · Ответственный: Сидоров С.В.
+            </span>
+
+
+            <button
+              class="btn primary small"
+              data-view-link="briefings"
+            >
+              Провести инструктаж
+            </button>
+
+
+          </div>
+
+
+        </article>
+
+
+
+
+
+
+        <!-- ЗАЯВКА 2 -->
+
+
+        <article
+          class="request-card"
+          data-search="ЗП-2026-0145 промвысота есть замечания"
+        >
+
+
+          <div class="request-top">
+
+
+            <div>
+
+
+              <div class="request-number">
+                ЗП-2026-0145
+              </div>
+
+
+              <h3>
+                ООО «ПромВысота»
+              </h3>
+
+
+              <p>
+                Корпус №7 · работы на высоте · 21 августа
+              </p>
+
+
+            </div>
+
+
+            <span class="status danger">
+              Есть замечания
+            </span>
+
+
+          </div>
+
+
+
+
+          <div class="steps">
+
+
+            <span class="done">
+              Заявка ✓
+            </span>
+
+
+            <span class="problem">
+              Документы !
+            </span>
+
+
+            <span class="problem">
+              Работники !
+            </span>
+
+
+            <span>
+              Инструктаж
+            </span>
+
+
+            <span>
+              Допуск
+            </span>
+
+
+          </div>
+
+
+
+
+          <div class="alerts">
+
+
+            <div>
+              Петров А.А. — отсутствует обязательный документ.
+            </div>
+
+
+            <div>
+              Сидоров И.В. — истёк срок действия удостоверения.
+            </div>
+
+
+          </div>
+
+
+
+
+          <div class="request-bottom">
+
+
+            <span>
+              8 работников · Ответственный: Орлов П.М.
+            </span>
+
+
+            <button
+              class="btn danger-btn small"
+              data-view-link="documents"
+            >
+              Устранить замечания
+            </button>
+
+
+          </div>
+
+
+        </article>
+
+
+
+
+
+
+        <!-- ЗАЯВКА 3 -->
+
+
+        <article
+          class="request-card"
+          data-search="ЗП-2026-0138 электросервис допущен"
+        >
+
+
+          <div class="request-top">
+
+
+            <div>
+
+
+              <div class="request-number">
+                ЗП-2026-0138
+              </div>
+
+
+              <h3>
+                ООО «Электросервис»
+              </h3>
+
+
+              <p>
+                Корпус №2 · электромонтаж · 21 августа
+              </p>
+
+
+            </div>
+
+
+            <span class="status success">
+              Допущен
+            </span>
+
+
+          </div>
+
+
+
+
+          <div class="steps">
+
+
+            <span class="done">
+              Заявка ✓
+            </span>
+
+
+            <span class="done">
+              Документы ✓
+            </span>
+
+
+            <span class="done">
+              Работники ✓
+            </span>
+
+
+            <span class="done">
+              Инструктаж ✓
+            </span>
+
+
+            <span class="done">
+              Допуск ✓
+            </span>
+
+
+          </div>
+
+
+
+
+          <div class="request-bottom">
+
+
+            <span>
+              4 работника · действует до 18:00
+            </span>
+
+
+            <button
+              class="btn ghost small"
+              data-view-link="permits"
+            >
+              Открыть допуск
+            </button>
+
+
+          </div>
+
+
+        </article>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- ОРГАНИЗАЦИИ -->
+    <!-- ========================= -->
+
+
+    <section id="contractors" class="view">
+
+
+      <div class="page-head">
+
+
+        <div>
+
+
+          <h1>
+            Подрядные организации
+          </h1>
+
+
+          <p>
+            Постоянные карточки организаций и история работ
+          </p>
+
+
+        </div>
+
+
+        <button
+          class="btn primary"
+          data-action="fake-add"
+        >
+          + Организация
+        </button>
+
+
+      </div>
+
+
+
+
+      <div class="panel table-wrap">
+
+
+        <table>
+
+
+          <thead>
+
+
+            <tr>
+
+
+              <th>
+                Организация
+              </th>
+
+
+              <th>
+                ИНН
+              </th>
+
+
+              <th>
+                Контакт
+              </th>
+
+
+              <th>
+                Документы
+              </th>
+
+
+              <th>
+                Последний визит
+              </th>
+
+
+            </tr>
+
+
+          </thead>
+
+
+
+
+          <tbody>
+
+
+            <tr>
+
+
+              <td>
+                <strong>
+                  ООО «СтройМонтаж»
+                </strong>
+              </td>
+
+
+              <td>
+                5401234567
+              </td>
+
+
+              <td>
+                Смирнов А.А.
+              </td>
+
+
+              <td>
+                <span class="status success">
+                  Комплект полный
+                </span>
+              </td>
+
+
+              <td>
+                21.08.2026
+              </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+              <td>
+                <strong>
+                  ООО «Электросервис»
+                </strong>
+              </td>
+
+
+              <td>
+                5407654321
+              </td>
+
+
+              <td>
+                Кузнецов В.И.
+              </td>
+
+
+              <td>
+                <span class="status warning">
+                  1 истекает
+                </span>
+              </td>
+
+
+              <td>
+                21.08.2026
+              </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+              <td>
+                <strong>
+                  ООО «ПромВысота»
+                </strong>
+              </td>
+
+
+              <td>
+                5409988776
+              </td>
+
+
+              <td>
+                Орлов П.М.
+              </td>
+
+
+              <td>
+                <span class="status danger">
+                  Есть замечания
+                </span>
+              </td>
+
+
+              <td>
+                21.08.2026
+              </td>
+
+
+            </tr>
+
+
+          </tbody>
+
+
+        </table>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- РАБОТНИКИ -->
+    <!-- ========================= -->
+
+
+    <section id="workers" class="view">
+
+
+      <div class="page-head">
+
+
+        <div>
+
+
+          <h1>
+            Работники подрядчиков
+          </h1>
+
+
+          <p>
+            Документы, квалификация и готовность к допуску
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <div class="panel table-wrap">
+
+
+        <table>
+
+
+          <thead>
+
+
+            <tr>
+
+
+              <th>
+                Работник
+              </th>
+
+
+              <th>
+                Организация
+              </th>
+
+
+              <th>
+                Профессия
+              </th>
+
+
+              <th>
+                Документы
+              </th>
+
+
+              <th>
+                Статус
+              </th>
+
+
+            </tr>
+
+
+          </thead>
+
+
+
+
+          <tbody>
+
+
+            <tr>
+
+
+              <td>
+                <strong>
+                  Иванов И.И.
+                </strong>
+              </td>
+
+
+              <td>
+                СтройМонтаж
+              </td>
+
+
+              <td>
+                Монтажник
+              </td>
+
+
+              <td>
+                8/8
+              </td>
+
+
+              <td>
+                <span class="status success">
+                  Готов
+                </span>
+              </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+              <td>
+                <strong>
+                  Петров А.А.
+                </strong>
+              </td>
+
+
+              <td>
+                ПромВысота
+              </td>
+
+
+              <td>
+                Монтажник
+              </td>
+
+
+              <td>
+                6/7
+              </td>
+
+
+              <td>
+                <span class="status danger">
+                  Проблема
+                </span>
+              </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+              <td>
+                <strong>
+                  Сидоров М.О.
+                </strong>
+              </td>
+
+
+              <td>
+                Электросервис
+              </td>
+
+
+              <td>
+                Электромонтёр
+              </td>
+
+
+              <td>
+                7/7
+              </td>
+
+
+              <td>
+                <span class="status warning">
+                  Скоро истекает
+                </span>
+              </td>
+
+
+            </tr>
+
+
+          </tbody>
+
+
+        </table>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- ДОКУМЕНТЫ -->
+    <!-- ========================= -->
+
+
+    <section id="documents" class="view">
+
+
+      <div class="page-head">
+
+
+        <div>
+
+
+          <h1>
+            Проверка документов
+          </h1>
+
+
+          <p>
+            Чек-лист по выбранному виду работ
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <div class="two-col">
+
+
+
+
+        <article class="panel">
+
+
+          <div class="panel-head">
+
+
+            <div>
+
+
+              <h2>
+                ООО «ПромВысота»
+              </h2>
+
+
+              <p>
+                Работы на высоте · Корпус №7
+              </p>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+          <div class="checklist">
+
+
+            <label>
+
+
+              <span>
+
+
+                <strong>
+                  Список работников
+                </strong>
+
+
+                <small>
+                  Соответствует заявке
+                </small>
+
+
+              </span>
+
+
+              <input
+                type="checkbox"
+                checked
+              />
+
+
+            </label>
+
+
+
+
+            <label>
+
+
+              <span>
+
+
+                <strong>
+                  Приказ на ответственного
+                </strong>
+
+
+                <small>
+                  Действующий документ
+                </small>
+
+
+              </span>
+
+
+              <input
+                type="checkbox"
+                checked
+              />
+
+
+            </label>
+
+
+
+
+            <label>
+
+
+              <span>
+
+
+                <strong>
+                  Документы по охране труда
+                </strong>
+
+
+                <small>
+                  Проверены
+                </small>
+
+
+              </span>
+
+
+              <input
+                type="checkbox"
+                checked
+              />
+
+
+            </label>
+
+
+
+
+            <label>
+
+
+              <span>
+
+
+                <strong>
+                  Документы для работ на высоте
+                </strong>
+
+
+                <small>
+                  Есть замечание у 1 работника
+                </small>
+
+
+              </span>
+
+
+              <input
+                id="heightDoc"
+                type="checkbox"
+              />
+
+
+            </label>
+
+
+
+
+            <label>
+
+
+              <span>
+
+
+                <strong>
+                  СИЗ
+                </strong>
+
+
+                <small>
+                  Проверены
+                </small>
+
+
+              </span>
+
+
+              <input
+                type="checkbox"
+                checked
+              />
+
+
+            </label>
+
+
+          </div>
+
+
+
+
+          <div class="panel-actions">
+
+
+            <button
+              id="approveDocs"
+              class="btn primary"
+            >
+              Подтвердить проверку
+            </button>
+
+
+          </div>
+
+
+        </article>
+
+
+
+
+
+
+        <aside class="panel problem-panel">
+
+
+          <h2>
+            Замечания
+          </h2>
+
+
+
+
+          <div
+            id="docProblem"
+            class="problem-box"
+          >
+
+
+            <strong>
+              Петров А.А.
+            </strong>
+
+
+            <span>
+              Отсутствует обязательный документ
+              для выбранного вида работ.
+            </span>
+
+
+          </div>
+
+
+
+
+          <div class="info-box">
+
+
+            После устранения всех замечаний
+            заявка сможет перейти к инструктажу.
+
+
+          </div>
+
+
+        </aside>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- ИНСТРУКТАЖ -->
+    <!-- ========================= -->
+
+
+    <section id="briefings" class="view">
+
+
+      <div class="page-head">
+
+
+        <div>
+
+
+          <h1>
+            Вводный инструктаж
+          </h1>
+
+
+          <p>
+            Фиксация прохождения инструктажа подрядчиками
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <div class="two-col">
+
+
+
+
+        <article class="panel form-panel">
+
+
+          <label>
+
+
+            Инструктирующий
+
+
+            <input
+              class="input"
+              value="Петров Сергей Николаевич"
+            />
+
+
+          </label>
+
+
+
+
+          <label>
+
+
+            Программа / инструкция
+
+
+            <select class="input">
+
+
+              <option>
+                Вводный инструктаж по охране труда, ред. 2026
+              </option>
+
+
+            </select>
+
+
+          </label>
+
+
+
+
+          <label>
+
+
+            Дата
+
+
+            <input
+              class="input"
+              type="date"
+              value="2026-08-21"
+            />
+
+
+          </label>
+
+
+        </article>
+
+
+
+
+
+
+        <article class="panel">
+
+
+          <div class="panel-head">
+
+
+            <div>
+
+
+              <h2>
+                ООО «СтройМонтаж»
+              </h2>
+
+
+              <p>
+                6 работников
+              </p>
+
+
+            </div>
+
+
+          </div>
+
+
+
+
+          <div class="checklist">
+
+
+            <label>
+
+
+              <span>
+
+
+                <strong>
+                  Иванов И.И.
+                </strong>
+
+
+                <small>
+                  Монтажник
+                </small>
+
+
+              </span>
+
+
+              <input
+                class="brief-check"
+                type="checkbox"
+                checked
+              />
+
+
+            </label>
+
+
+
+
+            <label>
+
+
+              <span>
+
+
+                <strong>
+                  Петров А.А.
+                </strong>
+
+
+                <small>
+                  Монтажник
+                </small>
+
+
+              </span>
+
+
+              <input
+                class="brief-check"
+                type="checkbox"
+                checked
+              />
+
+
+            </label>
+
+
+
+
+            <label>
+
+
+              <span>
+
+
+                <strong>
+                  Сидоров М.О.
+                </strong>
+
+
+                <small>
+                  Слесарь
+                </small>
+
+
+              </span>
+
+
+              <input
+                class="brief-check"
+                type="checkbox"
+                checked
+              />
+
+
+            </label>
+
+
+          </div>
+
+
+
+
+          <div class="panel-actions">
+
+
+            <button
+              id="completeBriefing"
+              class="btn primary"
+            >
+              Завершить инструктаж
+            </button>
+
+
+          </div>
+
+
+        </article>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- ДОПУСКИ -->
+    <!-- ========================= -->
+
+
+    <section id="permits" class="view">
+
+
+      <div class="page-head">
+
+
+        <div>
+
+
+          <h1>
+            Действующие допуски
+          </h1>
+
+
+          <p>
+            QR-проверка и контроль срока действия
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <div class="permit-grid">
+
+
+
+
+        <article class="permit-card">
+
+
+          <div class="permit-head">
+
+
+            <div>
+
+
+              <div class="request-number">
+                ПОД-2026-00842
+              </div>
+
+
+              <h2>
+                ООО «СтройМонтаж»
+              </h2>
+
+
+            </div>
+
+
+            <span class="status success">
+              Действует
+            </span>
+
+
+          </div>
+
+
+
+
+          <div class="permit-body">
+
+
+            <div
+              id="qrCode"
+              class="qr-demo"
+              aria-label="Демонстрационный QR-код"
+            >
+            </div>
+
+
+
+
+            <div>
+
+
+              <dl class="details">
+
+
+                <div>
+
+
+                  <dt>
+                    Объект
+                  </dt>
+
+
+                  <dd>
+                    Цех №5
+                  </dd>
+
+
+                </div>
+
+
+
+
+                <div>
+
+
+                  <dt>
+                    Работы
+                  </dt>
+
+
+                  <dd>
+                    Ремонт вентиляции
+                  </dd>
+
+
+                </div>
+
+
+
+
+                <div>
+
+
+                  <dt>
+                    Работников
+                  </dt>
+
+
+                  <dd>
+                    6
+                  </dd>
+
+
+                </div>
+
+
+
+
+                <div>
+
+
+                  <dt>
+                    Действует до
+                  </dt>
+
+
+                  <dd>
+                    23.08.2026 18:00
+                  </dd>
+
+
+                </div>
+
+
+              </dl>
+
+
+
+
+              <div class="permit-actions">
+
+
+                <button
+                  class="btn primary"
+                  id="printPermit"
+                >
+                  Печать
+                </button>
+
+
+
+
+                <button
+                  class="btn danger-btn"
+                  id="pausePermit"
+                >
+                  Приостановить
+                </button>
+
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+        </article>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ========================= -->
+    <!-- АРХИВ -->
+    <!-- ========================= -->
+
+
+    <section id="archive" class="view">
+
+
+      <div class="page-head">
+
+
+        <div>
+
+
+          <h1>
+            Архив
+          </h1>
+
+
+          <p>
+            История завершённых визитов и допусков
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <div class="panel table-wrap">
+
+
+        <table>
+
+
+          <thead>
+
+
+            <tr>
+
+
+              <th>
+                № допуска
+              </th>
+
+
+              <th>
+                Организация
+              </th>
+
+
+              <th>
+                Объект
+              </th>
+
+
+              <th>
+                Период
+              </th>
+
+
+              <th>
+                Результат
+              </th>
+
+
+            </tr>
+
+
+          </thead>
+
+
+
+
+          <tbody>
+
+
+            <tr>
+
+
+              <td>
+                ПОД-2026-00791
+              </td>
+
+
+              <td>
+                ООО «СтройМонтаж»
+              </td>
+
+
+              <td>
+                Цех №2
+              </td>
+
+
+              <td>
+                12.06.2026
+              </td>
+
+
+              <td>
+
+
+                <span class="status success">
+                  Завершено
+                </span>
+
+
+              </td>
+
+
+            </tr>
+
+
+
+
+            <tr>
+
+
+              <td>
+                ПОД-2026-00805
+              </td>
+
+
+              <td>
+                ООО «Электросервис»
+              </td>
+
+
+              <td>
+                Корпус №2
+              </td>
+
+
+              <td>
+                04.07.2026
+              </td>
+
+
+              <td>
+
+
+                <span class="status success">
+                  Завершено
+                </span>
+
+
+              </td>
+
+
+            </tr>
+
+
+          </tbody>
+
+
+        </table>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+</div>
+
+
+
+
+
+
+<!-- ========================= -->
+<!-- ОКНО НОВОЙ ЗАЯВКИ -->
+<!-- ========================= -->
+
+
+<div
+  id="modal"
+  class="modal hidden"
+>
+
+
+  <div
+    class="modal-backdrop"
+    data-close-modal
+  >
+  </div>
+
+
+
+
+  <div class="modal-card">
+
+
+    <div class="modal-head">
+
+
+      <div>
+
+
+        <h2>
+          Новая заявка
+        </h2>
+
+
+        <p>
+          Регистрация работ подрядной организации
+        </p>
+
+
+      </div>
+
+
+
+
+      <button
+        class="icon-btn"
+        data-close-modal
+      >
+        ✕
+      </button>
+
+
+    </div>
+
+
+
+
+    <div class="form-grid">
+
+
+      <label>
+
+
+        Организация
+
+
+        <select class="input">
+
+
+          <option>
+            ООО «СтройМонтаж»
+          </option>
+
+
+          <option>
+            ООО «Электросервис»
+          </option>
+
+
+          <option>
+            ООО «ПромВысота»
+          </option>
+
+
+        </select>
+
+
+      </label>
+
+
+
+
+      <label>
+
+
+        Подразделение
+
+
+        <select class="input">
+
+
+          <option>
+            Цех №5
+          </option>
+
+
+          <option>
+            Корпус №2
+          </option>
+
+
+          <option>
+            Корпус №7
+          </option>
+
+
+        </select>
+
+
+      </label>
+
+
+
+
+      <label class="span-2">
+
+
+        Вид работ
+
+
+        <select class="input">
+
+
+          <option>
+            Ремонт оборудования
+          </option>
+
+
+          <option>
+            Электромонтажные работы
+          </option>
+
+
+          <option>
+            Работы на высоте
+          </option>
+
+
+          <option>
+            Огневые работы
+          </option>
+
+
+        </select>
+
+
+      </label>
+
+
+
+
+      <label>
+
+
+        Дата начала
+
+
+        <input
+          class="input"
+          type="date"
+          value="2026-08-21"
+        />
+
+
+      </label>
+
+
+
+
+      <label>
+
+
+        Дата окончания
+
+
+        <input
+          class="input"
+          type="date"
+          value="2026-08-23"
+        />
+
+
+      </label>
+
+
+
+
+      <label class="span-2">
+
+
+        Ответственный от предприятия
+
+
+        <input
+          class="input"
+          value="Сидоров Сергей Викторович"
+        />
+
+
+      </label>
+
+
+    </div>
+
+
+
+
+    <div class="modal-actions">
+
+
+      <button
+        class="btn ghost"
+        data-close-modal
+      >
+        Отмена
+      </button>
+
+
+
+
+      <button
+        id="saveRequest"
+        class="btn primary"
+      >
+        Создать заявку
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<!-- ВСПЛЫВАЮЩИЕ УВЕДОМЛЕНИЯ -->
+
+
+<div
+  id="toast"
+  class="toast"
+>
+</div>
+
+
+
+
+<script src="app.js"></script>
+
+
+</body>
+</html>
